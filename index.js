@@ -12,7 +12,7 @@ app.use(comicsRoute);
 app.use(charactersRoute);
 
 app.all("*", (req, res) => {
-  res.json({ message: "Page not found" });
+  res.status(400).json({ message: "Page not found" });
 });
 
 app.listen(process.env.PORT, () => {
