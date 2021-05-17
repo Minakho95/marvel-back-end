@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get("/characters", async (req, res) => {
   try {
-    const limit = req.query.limit || 100;
+    const limit = 9;
     const skip = req.query.skip || 0;
     const charName = req.query.name && `&name=${req.query.name}`;
 
