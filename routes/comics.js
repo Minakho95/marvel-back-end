@@ -4,7 +4,7 @@ const axios = require("axios");
 
 router.get("/comics", async (req, res) => {
   try {
-    const limit = req.query.limit;
+    const limit = 10;
     const skip = req.query.skip || 0;
     const title = req.query.title && `&title=${req.query.title}`;
 
